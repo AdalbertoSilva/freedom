@@ -16,6 +16,15 @@ class Technique extends Model
         'execution',
         'restriction',
         'description',
-        'user_id'
+        'user_id',
+		'skill_id'
     ];
+
+	/**
+	 * Get the phone record associated with the user.
+	 */
+	public function skill()
+	{
+		return $this->belongsTo('App\Skill');
+	}
 }
