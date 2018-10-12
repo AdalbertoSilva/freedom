@@ -18,11 +18,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('techniques', function () {
-    return Technique::all();
+	return Technique::with('skill')->get();
 });
 
 Route::get('techniques/{id}', function ($id) {
-    return Technique::find($id);
+    return Technique::with('skill')->find($id);
 });
 
 Route::post('techniques', function (Request $request) {
@@ -41,9 +41,3 @@ Route::delete('techniques/{id}', function($id) {
 
     return 204;
 });
-//
-//Route::get('techniques', 'TechniqueController@index');
-//Route::get('techniques/{technique}', 'TechniqueController@show');
-//Route::post('techniques', 'TechniqueController@store');
-//Route::put('techniques/{technique}', 'TechniqueController@update');
-//Route::delete('techniques/{technique}', 'TechniqueController@delete');

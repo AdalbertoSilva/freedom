@@ -26,6 +26,7 @@ class CreateTechniquesTable extends Migration
             $table->text('description');
             $table->timestamp('created_at')->nullable();
             $table->increments('user_id');
+			$table->increments('skill_id');
             $table->timestamps();
         });
     }
