@@ -1,5 +1,6 @@
 <?php
 use App\Technique;
+use App\Character;
 use Illuminate\Http\Request;
 
 /*
@@ -38,6 +39,31 @@ Route::put('techniques/{id}', function (Request $request, $id) {
 
 Route::delete('techniques/{id}', function($id) {
     Technique::find($id)->delete();
+
+    return 204;
+});
+
+Route::get('characters', function () {
+    return Character::all();
+});
+
+Route::get('characters/{id}', function ($id) {
+    return Character::all()->find($id);
+});
+
+Route::post('characters', function (Request $request) {
+    return Character::create($request->all());
+});
+
+Route::put('characters/{id}', function (Request $request, $id) {
+    $character = Character::findOrFail($id);
+    $character->update($request->all());
+
+    return $character;
+});
+
+Route::delete('characters/{id}', function($id) {
+    Character::find($id)->delete();
 
     return 204;
 });
