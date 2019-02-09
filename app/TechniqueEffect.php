@@ -11,8 +11,8 @@ class TechniqueEffect extends Model
         'description'
     ];
 
-//    public function technique()
-//    {
-//        return $this->belongsTo('App\Technique');
-//    }
+    public function technique()
+    {
+        return $this->belongsTo('App\Technique', 'effect_id');
+    }
 }
