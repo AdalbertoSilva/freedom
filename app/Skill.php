@@ -13,8 +13,8 @@ class Skill extends Model
 		'user_id'
 	];
 
-	public function technique()
-	{
-		return $this->hasOne('App\Techniques');
-	}
+//	public function technique()
+//	{
+//		return $this->hasOne('App\Techniques');
+//	}
 }
