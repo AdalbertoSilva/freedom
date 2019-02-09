@@ -11,11 +11,8 @@ class TechniqueEffect extends Model
         'description'
     ];
 
-    /**
-     * Get the phone record associated with the user.
-     */
-    public function technique()
-    {
-        return $this->belongsTo('App\Technique');
-    }
+//    public function technique()
+//    {
+//        return $this->belongsTo('App\Technique');
+//    }
 }
