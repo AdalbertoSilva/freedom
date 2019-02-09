@@ -31,6 +31,6 @@ class Technique extends Model
 
     public function techniqueEffect()
     {
-        return $this->hasOne('App\TechniqueEffect','effect_id');
+        return $this->belongsTo('App\TechniqueEffect');
     }
 }
