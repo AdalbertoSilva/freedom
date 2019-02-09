@@ -13,6 +13,6 @@ class TechniqueEffect extends Model
 
     public function technique()
     {
-        return $this->hasOne('App\Technique');
+        return $this->hasOne('App\Techniques');
     }
 }
