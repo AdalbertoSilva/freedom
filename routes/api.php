@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('techniques', function () {
 
-    return Technique::with('skill, technique_effect')->get();
+    return Technique::with('skill, techniqueEffect')->get();
 });
 
 Route::get('techniques/{id}', function ($id) {

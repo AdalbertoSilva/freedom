@@ -29,7 +29,7 @@ class Technique extends Model
 		return $this->belongsTo('App\Skill');
 	}
 
-    public function technique_effect()
+    public function techniqueEffect()
     {
         return $this->hasOne('App/TechniqueEffect');
     }
