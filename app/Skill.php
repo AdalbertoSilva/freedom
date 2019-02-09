@@ -15,6 +15,6 @@ class Skill extends Model
 
 	public function technique()
 	{
-		return $this->hasOne('App/Techniques');
+		return $this->hasOne('App\Techniques');
 	}
 }
