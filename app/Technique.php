@@ -17,7 +17,8 @@ class Technique extends Model
         'restriction',
         'description',
         'user_id',
-		'skill_id'
+		'skill_id',
+        'effect_id'
     ];
 
 	/**
@@ -27,4 +28,9 @@ class Technique extends Model
 	{
 		return $this->belongsTo('App\Skill');
 	}
+
+    public function technique_effect()
+    {
+        return $this->hasOne('App/TechniqueEffect');
+    }
 }

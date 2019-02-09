@@ -25,8 +25,9 @@ class CreateTechniquesTable extends Migration
             $table->integer('restriction');
             $table->text('description');
             $table->timestamp('created_at')->nullable();
-            $table->increments('user_id');
-			$table->increments('skill_id');
+            $table->integer('user_id');
+			$table->integer('skill_id');
+            $table->integer('effect_id');
             $table->timestamps();
         });
     }
